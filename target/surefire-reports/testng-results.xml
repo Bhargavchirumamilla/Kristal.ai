@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Kristal Test Suite" duration-ms="7121" started-at="2020-10-09T11:49:00Z" finished-at="2020-10-09T11:49:08Z">
+    <groups>
+    </groups>
+    <test name="Tests" duration-ms="7121" started-at="2020-10-09T11:49:00Z" finished-at="2020-10-09T11:49:08Z">
+      <class name="com.kristal.cucumber.runner.CucumberTest">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.kristal.cucumber.runner.CucumberTest@29ee9faa]" name="suiteSetUp" is-config="true" duration-ms="6867" started-at="2020-10-09T17:18:54Z" finished-at="2020-10-09T17:19:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetUp -->
+        <test-method status="PASS" signature="launchTest()[pri:0, instance:com.kristal.cucumber.runner.CucumberTest@29ee9faa]" name="launchTest" is-config="true" duration-ms="165" started-at="2020-10-09T17:19:00Z" finished-at="2020-10-09T17:19:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTest -->
+        <test-method status="PASS" signature="login(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.kristal.cucumber.runner.CucumberTest@29ee9faa]" name="login" duration-ms="3478" started-at="2020-10-09T17:19:01Z" description="Apps" data-provider="Feature" finished-at="2020-10-09T17:19:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Home Screen]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="report()[pri:0, instance:com.kristal.cucumber.runner.CucumberTest@29ee9faa]" name="report" is-config="true" duration-ms="3401" started-at="2020-10-09T17:19:04Z" finished-at="2020-10-09T17:19:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="stopTest()[pri:0, instance:com.kristal.cucumber.runner.CucumberTest@29ee9faa]" name="stopTest" is-config="true" duration-ms="130" started-at="2020-10-09T17:19:08Z" finished-at="2020-10-09T17:19:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopTest -->
+      </class> <!-- com.kristal.cucumber.runner.CucumberTest -->
+    </test> <!-- Tests -->
+  </suite> <!-- Kristal Test Suite -->
+</testng-results>

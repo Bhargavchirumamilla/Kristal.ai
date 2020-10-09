@@ -1,0 +1,230 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "HomePage  consists of search bar",
+        "description": "",
+        "id": "home-screen;homepage--consists-of-search-bar",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 146525817,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Search bar displayed on home page",
+            "match": {
+              "location": "HomeStep.search_bar_displayed_on_home_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "Search for  word  facebook and verify autosuggestion list showing and  click on autosuggestion",
+        "description": "",
+        "id": "home-screen;search-for--word--facebook-and-verify-autosuggestion-list-showing-and--click-on-autosuggestion;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 136084538,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "EnterSearcKeyword is \"kristal.ai\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "kristal.ai",
+                  "offset": 22
+                }
+              ],
+              "location": "HomeStep.entersearckeyword_is(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148565264,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Autosuggestion size is 0 or less than 0",
+            "match": {
+              "location": "HomeStep.autosuggestion_size_is_0_or_less_than_0()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 949052192,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "NavigateFirstAutosuggestion",
+            "match": {
+              "location": "HomeStep.navigatefirstautosuggestion()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@SanityTest"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "User can search a sentence  in google and in results page all type of results will show",
+        "description": "",
+        "id": "home-screen;user-can-search-a-sentence--in-google-and-in-results-page-all-type-of-results-will-show;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 193045257,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "provide Name \"About Kristal.ai Company\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "About Kristal.ai Company",
+                  "offset": 14
+                }
+              ],
+              "location": "HomeStep.provide_Name(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1412148617,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "ClickSearchbar",
+            "match": {
+              "location": "HomeStep.clicksearchbar()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26298511,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Verify Images and Videos",
+            "match": {
+              "location": "HomeStep.verify_images_and_videos()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@SanityTest"
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "Verify the search result page title  is proper or not",
+        "description": "",
+        "id": "home-screen;verify-the-search-result-page-title--is-proper-or-not",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5866568,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Veify Home Page URL",
+            "match": {
+              "location": "HomeStep.veify_home_page_url()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 32,
+        "name": "Verify Google logo is present",
+        "description": "",
+        "id": "home-screen;verify-google-logo-is-present",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 22105581,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Logo Present Results Page",
+            "match": {
+              "location": "HomeStep.logo_present_results_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 205539112,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Navigate Back",
+            "match": {
+              "location": "HomeStep.navigate_back()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21042002,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Verify Logo In Home Page",
+            "match": {
+              "location": "HomeStep.verify_logo_in_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Home Screen",
+    "description": "",
+    "id": "home-screen",
+    "keyword": "Feature",
+    "uri": "Home.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@SanityTest"
+      }
+    ]
+  }
+]

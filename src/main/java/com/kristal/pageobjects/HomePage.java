@@ -1,8 +1,10 @@
 package com.kristal.pageobjects;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,6 +35,87 @@ public class HomePage extends TestHarness {
 
 	@FindBy(css = "#hplogo")
 	private WebElement logoHomePage;
+
+	@FindBy(xpath = "//span[@class='cross_country_pop']//img")
+	private WebElement popUp;
+
+	@FindBy(xpath = "//span[contains(text(),'Login')]")
+	private WebElement loginButton;
+
+	@FindBy(xpath = "//input[@id='phone-email']")
+	private WebElement username;
+
+	@FindBy(id = "password")
+	private WebElement userPassword;
+
+	@FindBy(xpath = "//button[contains(text(),'Continue')]")
+	private WebElement continueButton;
+	
+	@FindBy(id = "test-demo")
+	private WebElement kristalLogo;
+	
+	
+	public boolean newTab(int index) throws InterruptedException {
+		Thread.sleep(2000);
+		
+		ArrayList tabs= new ArrayList(driver.getWindowHandles());
+		System.out.print(tabs.size());
+		driver.switchTo().window((String) tabs.get(index));
+		Thread.sleep(1000);
+		return true;
+	}
+	
+	public boolean kristalLogoDisplayed() throws InterruptedException {
+		boolean imageRes = false;
+		
+		if (kristalLogo.isDisplayed()) {
+			System.out.println("Results page kristalLogo is diplayed");
+			imageRes = true;
+		}
+		return imageRes;
+
+	}
+	
+
+	public boolean enterusername(String email) throws InterruptedException {
+        
+		username.sendKeys(email);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		return true;
+
+	}
+
+	public boolean enterupassword(String password) throws InterruptedException {
+
+		userPassword.sendKeys(password);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		return true;
+
+	}
+	
+	public boolean tapcontinueButton() throws InterruptedException {
+		continueButton.click();
+		Thread.sleep(5000);
+
+		return true;
+	}
+
+	public boolean tapLoginButton() {
+		loginButton.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		return true;
+	}
+
+	public boolean popUp() {
+		try {
+			popUp.click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		} catch (Exception ex) {
+			System.out.println("User didn't find Any Popup");
+		}
+		return true;
+	}
 
 	public boolean enterSearcKeyword(String searchText) throws InterruptedException {
 

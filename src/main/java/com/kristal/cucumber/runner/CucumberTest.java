@@ -23,7 +23,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:TestResults/cucumber-reports/TestAutomation.html",
 				"html:target/cucumber-reports/cucumber-pretty", "json:target/cucumber-reports/CucumberTestReport.json",
-				"rerun:target/cucumber-reports/rerun.txt" }, monochrome = true, dryRun = false, tags = { "@SanityTest"})
+		"rerun:target/cucumber-reports/rerun.txt" }, monochrome = true, dryRun = false, tags = { "@LoginTest"})
 
 public class CucumberTest extends TestHarness {
 

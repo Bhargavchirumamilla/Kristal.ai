@@ -32,7 +32,8 @@ public class TestHarness {
 		capabilities.setJavascriptEnabled(true);
 		capabilities.setPlatform(Platform.MAC);
 		driver = new ChromeDriver(chromeOptions);
-		driver.get("https://www.google.com/");
+		//driver.get("https://www.google.com/");
+		driver.get("https://staging-web.kristal.ai/");
 		Thread.sleep(3000);
 		driver.manage().window().setSize(new Dimension(1410, 1100));
 		driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);

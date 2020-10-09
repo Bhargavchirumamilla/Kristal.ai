@@ -85,4 +85,45 @@ public class HomeStep extends TestHarness {
 		super();
 	}
 
+	@Given("^User Navigated To Home Page$")
+	public void user_Navigated_To_Home_Page() throws Throwable {
+		Home = new HomePage();
+	}
+
+	@When("^If user seen any Change your country select any country or Close Popup$")
+	public void if_user_seen_any_Change_your_country_select_any_country_or_Close_Popup() throws Throwable {
+		Assert.assertTrue(Home.popUp(), "Pop Up Is Mismatched");
+	}
+
+	@When("^User Tap Login Button$")
+	public void user_Tap_Login_Button() throws Throwable {
+		Assert.assertTrue(Home.tapLoginButton(), "Login Button Mismatched");
+	}
+
+	@Then("^user Navigated To New Tab$")
+	public void user_Navigated_To_New_Tab() throws Throwable {
+		Assert.assertTrue(Home.newTab(1),"user Navigated To New Tab  is mismatched");
+	}
+
+	@When("^User Navigated to Login Page Provide Username \"([^\"]*)\"$")
+	public void user_Navigated_to_Login_Page_Provide_Username(String arg1) throws Throwable {
+		Home = new HomePage();
+		Assert.assertTrue(Home.enterusername(arg1), "User name is Mismatched");
+	}
+
+	@Then("^User Navigated to Login Page Provide Password \"([^\"]*)\"$")
+	public void user_Navigated_to_Login_Page_Provide_Password(String arg1) throws Throwable {
+		Assert.assertTrue(Home.enterupassword(arg1), "password is Mismatched");
+	}
+
+	@And("^Tap Continue Button$")
+	public void tap_Continue_Button() throws Throwable {
+		Assert.assertTrue(Home.tapcontinueButton(), "Tap Continue Button is Mismatched");
+	}
+
+	@And("^Verify User Login to Kristal Website$")
+	public void verify_User_Navigated_to_Kristal_Website() throws Throwable {
+		Assert.assertTrue(Home.kristalLogoDisplayed(), "User Login to Kristal Website is Mismatched");
+	}
+
 }
